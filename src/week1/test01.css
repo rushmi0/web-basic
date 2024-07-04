@@ -1,0 +1,13 @@
+h1 {
+    color: #20c997
+}
+
+#id1 { color: #fd7e14}
+
+#id2 { color: #ffcd39 }
+
+.class1 { background-color: #c5d7f2 }
+
+.class2 { color: #ea868f }
+
+p.dotted { border-style: dashed }

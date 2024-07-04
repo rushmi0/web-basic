@@ -1,0 +1,25 @@
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+thead th {
+    background-color: #d1f4f1;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+tbody td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+tfoot {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #d1f4f1;
+    font-weight: bold;
+}
