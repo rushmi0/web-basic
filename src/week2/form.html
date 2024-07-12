@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        label {
+            color: #20c997
+        }
+
+        #tt {
+            color: #ea868f;
+        }
+
+        .cc {
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+
+<center><h2>ตัวอย่างแบบฟอร์ม</h2></center>
+<div align="center">
+    <form action="form2.html" method="post">
+
+        <label>ชื่อ-นามสกุล : </label>
+        <input name="fname" type="text" placeholder="first name"/>
+
+        <br/>
+
+        <label id="tt" class="cc">E-mail : </label>
+        <input name="email" type="text" placeholder="email"/>
+
+        <br/>
+
+        <label class="cc">ที่อยู่ : </label>
+        <textarea name="addr"></textarea>
+
+        <br/>
+
+        <label>เพศ :</label>
+        <input type="radio" name="gender"> Male <label/> <input type="radio" name="gender"> Female <label/>
+
+        <br/>
+
+        <label>ประเทศ : </label>
+        <select>
+            <option>Thai</option>
+            <option selected>Japaneses</option>
+            <option>China</option>
+        </select>
+
+        <br/>
+
+        <label>สิ่งที่สนใจ : </label>
+        <input type="checkbox"> Cat <input type="checkbox"> Dog <br/>
+
+        <label>ไฟล์แบน : </label>
+        <input type="file"/>
+
+        <br/>
+        <input type="button" value="button"/>
+        <input type="submit" value="submit"/>
+        <!--        <input type="reset" value="cancel"/>-->
+        <button type="reset">reset</button>
+
+
+    </form>
+</div>
+
+</body>
+</html>
