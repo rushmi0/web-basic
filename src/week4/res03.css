@@ -1,0 +1,42 @@
+
+/* ขนาดหน้าจอของ Mobile */
+@media screen and (max-width:    500px) {
+    .col-m1 { width: 25% }
+    .col-m2 { width: 50% }
+    .col-m3 { width: 75% }
+    .col-m4 { width: 100%; }
+}
+
+/* ขนาดหน้าจอของ PC */
+@media screen and (min-width: 501px) {
+    .col-p1 { width: 25% }
+    .col-p2 { width: 50% }
+    .col-p3 { width: 75% }
+    .col-p4 { width: 100%; }
+}
+
+[class*="col-"] { float: left; box-sizing: border-box; }
+
+.banner {
+    background: #fd7e14;
+    height: 100px;
+    padding: 20px;
+}
+
+.left {
+    background: #14c7fd;
+    height: 200px;
+    padding: 20px;
+}
+
+.right {
+    background-color: crimson;
+    height: 200px;
+    padding: 20px;
+}
+
+.foot {
+    background-color: #999999;
+    height: 100px;
+    padding: 20px;
+}

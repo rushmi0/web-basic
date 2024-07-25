@@ -1,0 +1,14 @@
+
+.banner {
+    background-color: #ff7fb2;
+    height: 100px;
+    width: 100%;
+    padding: 20px;
+}
+
+.left {
+    background-color: #7fff94;
+    width: 25%;
+    height: 200px;
+    padding: 20px;
+}

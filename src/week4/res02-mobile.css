@@ -1,0 +1,40 @@
+
+.banner {
+    background-color: aquamarine;
+    height: 100px;
+    padding: 20px;
+    float: left;
+    box-sizing: border-box;
+}
+
+.left {
+    background-color: #7f85ff;
+
+    height: 200px;
+    padding: 20px;
+    float: left;
+    box-sizing: border-box;
+}
+
+.right {
+    background-color: #db7fff;
+
+    height: 200px;
+    padding: 20px;
+    float: left;
+    box-sizing: border-box;
+}
+
+.foot {
+    background-color: #37ff00;
+
+    height: 100px;
+    padding: 20px;
+    float: left;
+    box-sizing: border-box;
+}
+
+.col-1 { width: 25% }
+.col-2 { width: 50% }
+.col-3 { width: 75% }
+.col-4 { width: 100%; }
