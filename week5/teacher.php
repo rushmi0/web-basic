@@ -23,11 +23,14 @@ $obj = mysqli_query($conn, $str);
 ?>
 
 <div class="card text-center" style="padding:15px;">
-    <h4>Search Employees System</h4>
+    <h4>Teacher System</h4>
 </div>
 <br>
 
 <div class="container">
+    <h4>PHP : Select Data
+        <a href="teacher_add.php" class="btn btn-primary" style="float:right;">Add New Record</a>
+    </h4><br>
     <form name="frmSearch" method="post" action="#" style="float:right;">
         Keyword :
         <input name="txtKeyword" type="text" id="txtKeyword" value="#">
@@ -62,9 +65,9 @@ $obj = mysqli_query($conn, $str);
                 <td><?= $t_lname ?></td>
                 <td><?= $t_email ?></td>
                 <td>
-                    <a href="#" style="color:green">
+                    <a href="teacher_edit.php?edit=<?=$row['id'];?>" style="color:green">
                         <i class="fa fa-pencil" aria-hidden="true"></i></a>&nbsp
-                    <a href="#" style="color:red" onclick="return confirm('Are you sure want to delete this record')">
+                    <a href="teacher_delete.php?del=<?=$row['id'];?>" style="color:red" onclick="return confirm('Are you sure want to delete this record')">
                         <i class="fa fa-trash" aria-hidden="true"></i>
                     </a>
                 </td>
