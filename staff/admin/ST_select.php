@@ -1,3 +1,12 @@
+<?php
+//session_start();
+//
+//if ($_SESSION['user'] == "") {
+//    echo '<meta http-equiv="refresh" content="0;URL=../login.php"> />';
+//}
+//
+//?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +36,9 @@ include("../page/pg.php");
 
 
 <div class="card text-center" style="padding:15px;">
-    <h4>Student System</h4>
+    <h4>Student System
+        <a href="../logout.php">log out</a>
+    </h4>
 </div>
 <br>
 
@@ -51,6 +62,7 @@ include("../page/pg.php");
         <thead>
         <tr>
             <th>No.</th>
+            <th>Picture</th>
             <th>Fullname</th>
             <th>Nickname</th>
             <th>Midterm</th>
@@ -69,10 +81,12 @@ include("../page/pg.php");
 
             <tr>
                 <td><?= ++$i; ?></td>
+<!--                <td><img src="img/person.png"></td>-->
+                <td><img src="<?=$result['img']; ?>"></td>
                 <td><?php echo $result['fname']; ?></td>
-                <td><?= $result['nname']; ?></td>
-                <td><?= $result['mid_score']; ?></td>
-                <td><?= $result['final_score']; ?></td>
+                <td><?=$result['nname']; ?></td>
+                <td><?=$result['mid_score']; ?></td>
+                <td><?=$result['final_score']; ?></td>
                 <td>
                     <a href="ST_edit.php?edit=<?= $result['id']; ?>" style="color:green">
                         <i class="fa fa-pencil" aria-hidden="true"></i></a>&nbsp

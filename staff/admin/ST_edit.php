@@ -26,10 +26,10 @@ global $conn;
 
 <div class="card text-center" style="padding:15px;">
 <h4>PHP : Edit Data</h4>
-</div><br> 
+</div><br>
 
 <div class="container">
-  <form action="ST_edit-p.php" method="post">
+  <form action="ST_edit-p.php" method="post" enctype="multipart/form-data">
     <div class="form-group">
       <label for="fullname">FullName:</label>
       <input type="text" value="<?=$result['fname']; ?>" class="form-control" name="fullname" placeholder="Enter Fullname" required="">
@@ -46,6 +46,13 @@ global $conn;
       <label for="finalscore">Final Score:</label>
       <input type="text" value="<?=$result['final_score']; ?>"   class="form-control" name="final_score" placeholder="Enter Final Score" required="">
     </div>
+
+      <div class="form-group">
+          <img src="<?=$result['img'];?>" width="50"> <br>
+          <label for="Picture">Picture:</label>
+          <input type="file" class="form-control" name="fileupload">
+      </div>
+    <input type="hidden" name="pic" value="<?=$result['img']; ?>"  />
     <input type="hidden" name="editID" value="<?=$result['id']; ?>"  />
     <input type="submit" name="submit" class="btn btn-primary" style="float:right;" value="Submit">
   </form>

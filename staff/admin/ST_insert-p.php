@@ -1,22 +1,42 @@
 <?php
-
-$fullname   = $_POST['fullname'];
-$nname      = $_POST['nname'];
-$mid_score  = $_POST['mid_score'];
+$fullname = $_POST['fullname'];
+$nname = $_POST['nname'];
+$mid_score = $_POST['mid_score'];
 $final_score = $_POST['final_score'];
+$dst_file = "img/person.png";
+
+if (isset($_FILES['fileupload'])) {
+    $file_name = $_FILES['fileupload']['name'];
+    $file_src = $_FILES['fileupload']['tmp_name'];
+
+    $file_name = time() . "_" . $file_name;
+    $dst_file = "img/" . $file_name;
+
+    if (move_uploaded_file($file_src, $dst_file)) {
+        echo "uploaded successfully.";
+
+    } else {
+        echo "Failed to upload this file.";
+    }
+} else {
+    echo "No file uploaded.";
+    $dst_file = "img/person.png";
+}
+
 
 //connet DB
 include("../config.php");
 
 //Query
-$str = "insert into student (fname,nname,mid_score,final_score) 
-        values('$fullname','$nname','$mid_score','$final_score')";
-$obj = mysqli_query($conn,$str);
+$str = "insert into student (fname,nname,mid_score,final_score, img) 
+        values('$fullname','$nname','$mid_score','$final_score', '$dst_file')";
 
-if($obj){
+$obj = mysqli_query($conn, $str);
+
+if ($obj) {
     echo "OK!..";
     echo "<meta http-equiv='refresh' content='3;URL=ST_select.php' />";
-}else{
+} else {
     echo "No No No!..";
     echo "<meta http-equiv='refresh' content='3;URL=ST_insert.php' />";
 }

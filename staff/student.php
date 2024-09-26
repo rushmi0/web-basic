@@ -27,7 +27,10 @@ include("page/pg.php");
 
 
 <div class="card text-center" style="padding:15px;">
-    <h4>Student System</h4>
+    <h4>Student System
+        <a href="logout.php">log out</a>
+
+    </h4>
 </div>
 <br>
 
@@ -50,6 +53,7 @@ include("page/pg.php");
         <thead>
         <tr>
             <th>No.</th>
+            <th>Picture</th>
             <th>Fullname</th>
             <th>Nickname</th>
             <th>Midterm</th>
@@ -68,6 +72,7 @@ include("page/pg.php");
             ?>
             <tr>
                 <td><?= ++$i; ?></td>
+                <td><img src="<?="admin/".$result['img']; ?>"></td>
                 <td><?php echo $result['fname']; ?></td>
                 <td><?= $result['nname']; ?></td>
                 <td><?= $result['mid_score']; ?></td>
