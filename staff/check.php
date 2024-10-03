@@ -5,7 +5,7 @@ include("config.php");
 $userAd = mysqli_real_escape_string($conn,$_POST['userAd']);
 $passAd = md5($_POST['passAd']);
 
-$str = "SELECT * FROM admin WHERE a_user = '$userAd' AND a_pass = '$passAd'";
+$str = "SELECT * FROM customer WHERE username = '$userAd' AND password = '$passAd'";
 $obj = mysqli_query($conn, $str);
 
 if($obj && mysqli_num_rows($obj) == 1) {
